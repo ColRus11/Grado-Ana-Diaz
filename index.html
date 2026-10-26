@@ -6,95 +6,109 @@
 <title>Ana Bolena Diaz Cubillos · Grado de Doctorado</title>
 <meta property="og:title" content="Ana Bolena Diaz Cubillos · Grado de Doctorado">
 <meta property="og:description" content="Sábado 31 de octubre · 7:30 pm · Restaurante Cecilia, Usaquén">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://colrus11.github.io/Grado-Ana-Diaz/UCQ.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--cream:#f7f2ea;--navy:#1b2a4a;--navy2:#2d4068;--gold:#b8963e;--gold2:#d8bc72;--ink:#2c2c2c;--muted:#6b6b6b}
+:root{--cream:#f7f2ea;--navy:#15223f;--navy2:#2a3b62;--gold:#b08a35;--gold2:#d8bc72;--ink:#1f2638;--soft:#3d4a6a}
 body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--navy);min-height:100vh;overflow-x:hidden}
 
-.wash{position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(40px);opacity:.55;pointer-events:none;z-index:0}
-.wash.a{top:-140px;left:-150px;background:radial-gradient(circle,#2d4068 0%,#5c6f94 45%,transparent 70%)}
-.wash.b{bottom:-150px;right:-150px;background:radial-gradient(circle,#1b2a4a 0%,#4b5e85 45%,transparent 70%)}
+.wash{position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(40px);opacity:.5;pointer-events:none;z-index:0}
+.wash.a{top:-140px;left:-150px;background:radial-gradient(circle,#2a3b62 0%,#5c6f94 45%,transparent 70%)}
+.wash.b{bottom:-150px;right:-150px;background:radial-gradient(circle,#15223f 0%,#4b5e85 45%,transparent 70%)}
 .leaf{position:fixed;z-index:0;pointer-events:none;width:160px;opacity:.9}
 .leaf.a{top:10px;left:6px}
 .leaf.b{bottom:10px;right:6px;transform:rotate(180deg)}
 
-#envelope{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;background:var(--cream);transition:opacity .9s,visibility .9s}
+#envelope{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;background:var(--cream);transition:opacity .9s,visibility .9s;padding:24px}
 #envelope.open{opacity:0;visibility:hidden}
-.env{position:relative;width:280px;height:190px;cursor:pointer}
-.env .back{position:absolute;inset:0;background:var(--navy);border-radius:6px}
-.env .letter{position:absolute;left:14px;right:14px;top:14px;bottom:14px;background:var(--cream);border:1px solid var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:transform 1s ease .5s}
-.env .letter span{font-family:'Cinzel',serif;color:var(--navy);font-size:18px;letter-spacing:5px}
-.env .front{position:absolute;inset:0;clip-path:polygon(0 25%,50% 70%,100% 25%,100% 100%,0 100%);background:var(--navy2);border-radius:6px}
-.env .flap{position:absolute;left:0;right:0;top:0;height:50%;clip-path:polygon(0 0,100% 0,50% 100%);background:var(--navy);transform-origin:top;transition:transform .8s ease;z-index:3}
-.env .seal{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--gold2),var(--gold) 60%,#8a6e2a);z-index:4;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:22px;color:var(--cream);box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .5s,opacity .5s}
+.ehead{text-align:center}
+.ehead .t1{font-family:'Cinzel',serif;font-size:12px;letter-spacing:5px;color:var(--gold)}
+.ehead .t2{font-family:'Cinzel',serif;font-size:22px;letter-spacing:3px;color:var(--navy);margin-top:8px}
+.ehead .t3{font-size:19px;font-style:italic;color:var(--soft);margin-top:6px}
+.env{position:relative;width:300px;height:200px;cursor:pointer;animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+.env .back{position:absolute;inset:0;background:var(--navy);border-radius:8px;box-shadow:0 18px 40px rgba(21,34,63,.28)}
+.env .back::after{content:"";position:absolute;inset:8px;border:1px solid rgba(216,188,114,.55);border-radius:4px}
+.env .letter{position:absolute;left:16px;right:16px;top:16px;bottom:16px;background:var(--cream);border:1px solid var(--gold);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:14px;transition:transform 1s ease .5s}
+.env .letter .l1{font-family:'Cinzel',serif;color:var(--gold);font-size:10px;letter-spacing:4px}
+.env .letter .l2{font-family:'Great Vibes',cursive;color:var(--navy);font-size:30px;line-height:1;margin-top:6px}
+.env .front{position:absolute;inset:0;clip-path:polygon(0 28%,50% 72%,100% 28%,100% 100%,0 100%);background:var(--navy2);border-radius:8px}
+.env .front::after{content:"";position:absolute;left:0;right:0;bottom:0;height:72%;background:linear-gradient(135deg,rgba(255,255,255,.06),transparent 50%,rgba(0,0,0,.12))}
+.env .flap{position:absolute;left:0;right:0;top:0;height:52%;clip-path:polygon(0 0,100% 0,50% 100%);background:var(--navy);transform-origin:top;transition:transform .8s ease;z-index:3}
+.env .flap::after{content:"";position:absolute;left:0;right:0;top:0;height:100%;clip-path:polygon(6px 6px,calc(100% - 6px) 6px,50% calc(100% - 7px));background:linear-gradient(180deg,#1c2c50,#15223f)}
+.env .seal{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e6cf8c,var(--gold) 55%,#7d6020);z-index:4;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:21px;color:#fff8ea;box-shadow:0 5px 14px rgba(0,0,0,.4),inset 0 0 0 3px rgba(255,255,255,.25);transition:transform .5s,opacity .5s}
+.env .seal::before{content:"";position:absolute;inset:-6px;border:1px solid rgba(176,138,53,.45);border-radius:50%;animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+.env.opening{animation:none}
 .env.opening .flap{transform:rotateX(180deg);z-index:1}
 .env.opening .seal{transform:translate(-50%,-50%) scale(0);opacity:0}
-.env.opening .letter{transform:translateY(-120px)}
-.hint{font-family:'Cinzel',serif;font-size:11px;letter-spacing:4px;color:var(--gold);animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.4}}
+.env.opening .letter{transform:translateY(-130px)}
+.hint{font-family:'Cinzel',serif;font-size:12px;letter-spacing:4px;color:var(--navy);display:flex;align-items:center;gap:10px}
+.hint::before,.hint::after{content:"";width:28px;height:1px;background:var(--gold)}
 
-.card{position:relative;z-index:1;max-width:460px;margin:16px auto;padding:44px 26px 48px;text-align:center;opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}
+.card{position:relative;z-index:1;max-width:460px;margin:16px auto;padding:44px 24px 48px;text-align:center;opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}
 .card.show{opacity:1;transform:none}
 .frame{position:absolute;inset:8px;border:1px solid var(--gold);pointer-events:none}
 .frame::before,.frame::after{content:"";position:absolute;width:28px;height:28px;border:1px solid var(--gold)}
 .frame::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
 .frame::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
-
-.mono{width:72px;height:72px;margin:0 auto 10px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:28px;color:var(--navy)}
-.uni{font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;color:var(--navy)}
-.uni small{display:block;font-family:'Cormorant Garamond';font-size:12px;letter-spacing:3px;color:var(--muted);margin-top:4px}
+.logo{display:block;width:170px;max-height:200px;object-fit:contain;margin:0 auto 6px}
 .orn{color:var(--gold);font-size:20px;margin:22px 0;letter-spacing:6px}
-.intro{font-size:19px;line-height:1.45;color:var(--ink);padding:0 10px}
+.intro{font-size:21px;font-weight:500;line-height:1.45;color:var(--ink);padding:0 6px}
 .pre{font-family:'Cinzel',serif;font-size:14px;letter-spacing:5px;color:var(--gold);margin-top:22px}
-.big{font-family:'Cinzel',serif;font-size:44px;letter-spacing:3px;color:var(--navy);line-height:1.1;margin:6px 0}
-.post{font-family:'Cinzel',serif;font-size:13px;letter-spacing:3px;color:var(--gold)}
-.script{font-family:'Pinyon Script',cursive;font-size:36px;color:var(--navy);margin-top:26px;line-height:1}
-.name{font-size:38px;font-weight:600;color:var(--navy);line-height:1.1;margin-top:4px}
+.big{font-family:'Cinzel',serif;font-weight:600;font-size:44px;letter-spacing:3px;color:var(--navy);line-height:1.1;margin:6px 0}
+.post{font-family:'Cinzel',serif;font-size:13px;letter-spacing:3px;color:var(--navy)}
+.script{font-family:'Great Vibes',cursive;font-size:46px;color:var(--navy);margin-top:24px;line-height:1}
+.name{font-size:38px;font-weight:700;color:var(--navy);line-height:1.1;margin-top:2px}
 
-.row{display:grid;grid-template-columns:1fr 1fr;gap:20px 10px;margin:28px 0 8px}
-.item{padding:0 4px}
-.ico{width:46px;height:46px;margin:0 auto 8px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy)}
-.ico svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:22px 10px;margin:28px 0 10px}
+.ico{width:48px;height:48px;margin:0 auto 8px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.ico svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .k{font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:var(--gold);margin-bottom:5px}
-.v{font-size:20px;line-height:1.3;color:var(--navy)}
-.v .s{font-family:'Pinyon Script',cursive;font-size:30px;line-height:1;display:block;margin:2px 0}
-.v small{display:block;font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:3px}
-.tag{font-style:italic;font-size:17px;color:var(--ink);line-height:1.5}
+.v{font-size:22px;font-weight:600;line-height:1.3;color:var(--navy)}
+.v .s{font-style:italic;font-weight:600;font-size:28px;display:block;line-height:1.1}
+.v small{display:block;font-size:16px;font-weight:500;color:var(--soft);line-height:1.5;margin-top:4px}
+.tag{font-style:italic;font-weight:500;font-size:19px;color:var(--ink);line-height:1.5}
 .map{margin:14px 0 0;border:1px solid var(--gold);border-radius:12px;overflow:hidden}
-.map iframe{display:block;width:100%;height:200px;border:0;filter:sepia(.25) saturate(.8)}
+.map iframe{display:block;width:100%;height:200px;border:0;filter:sepia(.2) saturate(.85)}
+.note{margin-top:12px;font-size:16px;font-weight:500;color:var(--soft);line-height:1.5}
 .count{display:flex;justify-content:center;gap:10px;margin:26px 0 6px}
-.count div{min-width:60px;padding:10px 4px;border:1px solid var(--gold);border-radius:8px;background:rgba(255,255,255,.5)}
-.count strong{display:block;font-family:'Cinzel',serif;font-size:24px;color:var(--navy);font-weight:400}
-.count span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.count div{min-width:60px;padding:10px 4px;border:1px solid var(--gold);border-radius:8px;background:rgba(255,255,255,.55)}
+.count strong{display:block;font-family:'Cinzel',serif;font-size:24px;color:var(--navy);font-weight:600}
+.count span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);font-weight:600}
 .btns{display:grid;gap:11px;margin-top:28px}
-.btn{display:block;padding:15px;border-radius:50px;text-decoration:none;font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;transition:transform .2s}
+.btn{display:block;padding:16px;border-radius:50px;text-decoration:none;font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;transition:transform .2s}
 .btn:active{transform:scale(.97)}
-.btn.main{background:var(--navy);color:var(--cream)}
-.btn.ghost{border:1px solid var(--navy);color:var(--navy)}
-.foot{margin-top:34px;font-style:italic;font-size:18px;color:var(--muted)}
+.btn.main{background:var(--navy);color:#fff8ea}
+.btn.ghost{border:1.5px solid var(--navy);color:var(--navy)}
+.foot{margin-top:34px;font-style:italic;font-size:20px;font-weight:500;color:var(--soft)}
 </style>
 </head>
 <body>
 <div class="wash a"></div><div class="wash b"></div>
-<svg class="leaf a" viewBox="0 0 160 160" fill="none" stroke="#b8963e" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
-<svg class="leaf b" viewBox="0 0 160 160" fill="none" stroke="#b8963e" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
+<svg class="leaf a" viewBox="0 0 160 160" fill="none" stroke="#b08a35" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
+<svg class="leaf b" viewBox="0 0 160 160" fill="none" stroke="#b08a35" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
 
 <div id="envelope">
+  <div class="ehead">
+    <div class="t1">CELEBRACIÓN DE GRADO</div>
+    <div class="t2">DOCTORADO</div>
+    <div class="t3">Tienes una invitación</div>
+  </div>
   <div class="env" id="env">
     <div class="back"></div>
-    <div class="letter"><span>INVITACIÓN</span></div>
+    <div class="letter"><div class="l1">PARA TI</div><div class="l2">Ana Bolena Diaz Cubillos</div></div>
     <div class="front"></div>
     <div class="flap"></div>
     <div class="seal">AB</div>
   </div>
-  <div class="hint">TOCA PARA ABRIR</div>
+  <div class="hint">TOCA EL SELLO</div>
 </div>
 
 <main class="card" id="card">
   <div class="frame"></div>
-  <div class="mono">UC</div>
-  <div class="uni">UNIVERSIDAD CUAUHTÉMOC<small>MÉXICO</small></div>
+  <img class="logo" src="UCQ.png" alt="Universidad Cuauhtémoc">
   <div class="orn">✦ ❧ ✦</div>
 
   <p class="intro">Tras años de investigación y dedicación, Ana Bolena culmina un logro muy especial. Nos encantaría que nos acompañes a brindar por él.</p>
@@ -108,16 +122,16 @@ body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--
   <div class="orn">✦ ❧ ✦</div>
 
   <div class="row">
-    <div class="item"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div class="k">FECHA</div><div class="v">Sábado<br>31 de octubre<br>2026</div></div>
-    <div class="item"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div class="k">HORA</div><div class="v">7:30 pm</div></div>
-    <div class="item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11.5a7 7 0 0 0-14 0C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div class="k">RECEPCIÓN</div><div class="v">Restaurante<span class="s">Cecilia</span><small>Calle 117 # 6A-60<br>Usaquén, Bogotá</small></div></div>
-    <div class="item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 8a3 3 0 0 1-6 0zM12 14v6M9 20h6"/></svg></div><div class="k">VESTIMENTA</div><div class="v">Formal</div></div>
+    <div><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div class="k">FECHA</div><div class="v">Sábado<br>31 de octubre<br>2026</div></div>
+    <div><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div class="k">HORA</div><div class="v">7:30 pm</div></div>
+    <div><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11.5a7 7 0 0 0-14 0C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div class="k">RECEPCIÓN</div><div class="v">Restaurante<span class="s">Cecilia</span><small>Calle 117 # 6A-60<br>Usaquén, Bogotá</small></div></div>
+    <div><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 8a3 3 0 0 1-6 0zM12 14v6M9 20h6"/></svg></div><div class="k">VESTIMENTA</div><div class="v">Formal</div></div>
   </div>
 
   <p class="tag">Será una noche para celebrar los sueños, el esfuerzo y los nuevos comienzos.</p>
 
   <div class="map"><iframe loading="lazy" src="https://maps.google.com/maps?q=Restaurante+Cecilia+Usaquen,+Calle+117+%236A-60,+Bogota&z=16&output=embed"></iframe></div>
-  <p class="v" style="margin-top:12px"><small>Parqueadero City Parking en el mismo edificio, con 20% de descuento para invitados del restaurante.</small></p>
+  <p class="note">Parqueadero City Parking en el mismo edificio, con 20% de descuento para invitados del restaurante.</p>
 
   <div class="count" id="count">
     <div><strong id="d">0</strong><span>días</span></div>
