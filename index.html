@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--cream:#f7f2ea;--navy:#15223f;--navy2:#2a3b62;--gold:#b08a35;--gold2:#d8bc72;--ink:#1f2638;--soft:#3d4a6a}
+:root{--cream:#f7f2ea;--navy:#15223f;--navy2:#2a3b62;--gold:#8c6a1f;--gold2:#b89548;--ink:#1f2638;--soft:#3d4a6a}
 body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--navy);min-height:100vh;overflow-x:hidden}
 
 .wash{position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(40px);opacity:.5;pointer-events:none;z-index:0}
@@ -29,7 +29,7 @@ body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--
 .env{position:relative;width:300px;height:200px;cursor:pointer;animation:float 4s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-6px)}}
 .env .back{position:absolute;inset:0;background:var(--navy);border-radius:8px;box-shadow:0 18px 40px rgba(21,34,63,.28)}
-.env .back::after{content:"";position:absolute;inset:8px;border:1px solid rgba(216,188,114,.55);border-radius:4px}
+.env .back::after{content:"";position:absolute;inset:8px;border:1px solid rgba(184,149,72,.6);border-radius:4px}
 .env .letter{position:absolute;left:16px;right:16px;top:16px;bottom:16px;background:var(--cream);border:1px solid var(--gold);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:14px;transition:transform 1s ease .5s}
 .env .letter .l1{font-family:'Cinzel',serif;color:var(--gold);font-size:10px;letter-spacing:4px}
 .env .letter .l2{font-family:'Great Vibes',cursive;color:var(--navy);font-size:30px;line-height:1;margin-top:6px}
@@ -37,8 +37,8 @@ body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--
 .env .front::after{content:"";position:absolute;left:0;right:0;bottom:0;height:72%;background:linear-gradient(135deg,rgba(255,255,255,.06),transparent 50%,rgba(0,0,0,.12))}
 .env .flap{position:absolute;left:0;right:0;top:0;height:52%;clip-path:polygon(0 0,100% 0,50% 100%);background:var(--navy);transform-origin:top;transition:transform .8s ease;z-index:3}
 .env .flap::after{content:"";position:absolute;left:0;right:0;top:0;height:100%;clip-path:polygon(6px 6px,calc(100% - 6px) 6px,50% calc(100% - 7px));background:linear-gradient(180deg,#1c2c50,#15223f)}
-.env .seal{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e6cf8c,var(--gold) 55%,#7d6020);z-index:4;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:21px;color:#fff8ea;box-shadow:0 5px 14px rgba(0,0,0,.4),inset 0 0 0 3px rgba(255,255,255,.25);transition:transform .5s,opacity .5s}
-.env .seal::before{content:"";position:absolute;inset:-6px;border:1px solid rgba(176,138,53,.45);border-radius:50%;animation:ring 2.4s ease-out infinite}
+.env .seal{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d4b870,var(--gold2) 50%,#5e4612);z-index:4;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:21px;color:#fff8ea;box-shadow:0 5px 14px rgba(0,0,0,.4),inset 0 0 0 3px rgba(255,255,255,.22);transition:transform .5s,opacity .5s}
+.env .seal::before{content:"";position:absolute;inset:-6px;border:1px solid rgba(140,106,31,.5);border-radius:50%;animation:ring 2.4s ease-out infinite}
 @keyframes ring{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.5);opacity:0}}
 .env.opening{animation:none}
 .env.opening .flap{transform:rotateX(180deg);z-index:1}
@@ -65,10 +65,12 @@ body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--
 .info{display:grid;gap:26px;margin:30px 0 12px}
 .k{font-family:'Cinzel',serif;font-size:12px;letter-spacing:4px;color:var(--gold);margin-bottom:6px}
 .v{font-size:28px;font-weight:600;line-height:1.25;color:var(--navy)}
-.v .s{font-style:italic;font-weight:600;font-size:34px;display:block;line-height:1.1}
 .v small{display:block;font-size:18px;font-weight:500;color:var(--soft);line-height:1.5;margin-top:5px}
+.venue{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-top:4px}
+.venue span{display:block;font-family:'Great Vibes',cursive;font-weight:400;font-size:62px;line-height:1;margin:4px 0 2px}
+.venue small{display:block;font-size:19px;font-weight:500;color:var(--soft);margin-top:6px}
 .tag{font-style:italic;font-weight:500;font-size:19px;color:var(--ink);line-height:1.5}
-.map{margin:14px 0 0;border:1px solid var(--gold);border-radius:12px;overflow:hidden}
+.map{margin:16px 0 0;border:1px solid var(--gold);border-radius:12px;overflow:hidden}
 .map iframe{display:block;width:100%;height:200px;border:0;filter:sepia(.2) saturate(.85)}
 .note{margin-top:12px;font-size:16px;font-weight:500;color:var(--soft);line-height:1.5}
 .count{display:flex;justify-content:center;gap:10px;margin:26px 0 6px}
@@ -85,8 +87,8 @@ body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--
 </head>
 <body>
 <div class="wash a"></div><div class="wash b"></div>
-<svg class="leaf a" viewBox="0 0 160 160" fill="none" stroke="#b08a35" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
-<svg class="leaf b" viewBox="0 0 160 160" fill="none" stroke="#b08a35" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
+<svg class="leaf a" viewBox="0 0 160 160" fill="none" stroke="#8c6a1f" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
+<svg class="leaf b" viewBox="0 0 160 160" fill="none" stroke="#8c6a1f" stroke-width="1.2"><path d="M10 150C30 90 60 50 150 10"/><path d="M40 112c-18-4-30-18-30-36 18 0 30 14 30 36zM62 86c-16-8-24-24-20-42 16 4 26 20 20 42zM88 62c-12-12-14-30-6-46 14 8 18 28 6 46zM116 40c-6-16-2-34 10-46 8 14 4 34-10 46z"/></svg>
 
 <div id="envelope">
   <div class="ehead">
@@ -121,14 +123,18 @@ body{font-family:'Cormorant Garamond',serif;background:var(--cream);color:var(--
 
   <div class="info">
     <div><div class="k">CUÁNDO</div><div class="v">Sábado 31 de octubre de 2026<small>7:30 pm · Cena de celebración</small></div></div>
-    <div><div class="k">DÓNDE</div><div class="v">Restaurante<span class="s">Cecilia</span><small>Calle 117 # 6A-60 · Usaquén, Bogotá</small></div></div>
     <div><div class="k">VESTIMENTA</div><div class="v">Formal</div></div>
   </div>
 
-  <p class="tag">Será una noche para celebrar los sueños, el esfuerzo y los nuevos comienzos.</p>
+  <div class="orn">❧</div>
+  <div class="k">RECEPCIÓN</div>
+  <div class="venue">Restaurante<span>Cecilia</span><small>Calle 117 # 6A-60 · Usaquén, Bogotá</small></div>
 
   <div class="map"><iframe loading="lazy" src="https://maps.google.com/maps?q=Restaurante+Cecilia+Usaquen,+Calle+117+%236A-60,+Bogota&z=16&output=embed"></iframe></div>
   <p class="note">Parqueadero City Parking en el mismo edificio, con 20% de descuento para invitados del restaurante.<br>Por políticas del lugar, la velada es solo para personas; te pedimos no asistir con mascotas.</p>
+
+  <div class="orn">✦</div>
+  <p class="tag">Será una noche para celebrar los sueños, el esfuerzo y los nuevos comienzos.</p>
 
   <div class="count" id="count">
     <div><strong id="d">0</strong><span>días</span></div>
